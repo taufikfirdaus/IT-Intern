@@ -19,7 +19,7 @@
                 ?>
                 <div class="container-fluid">
                 <form method="POST" action="cedit.php" enctype="multipart/form-data">
-             
+                <input class="form-control" type="text"  name="id_participant" value="<?php echo $erow['id_participant']; ?>"  hidden/>
                        <div class="form-group">
                                                         <label>ID</label>
                                                         <input class="form-control" type="text"  name="id_participant" value="<?php echo $erow['id_participant']; ?>" disabled />
