@@ -34,11 +34,7 @@
                                                         <label>Email</label>
                                                         <input class="form-control" type="text"  name="email_participant" value="<?php echo $erow['email_participant']; ?>"  />
                                                     </div>
-                                                       <div class="form-group">
-                                                        <label>Password</label>
-                                                        <input class="form-control" type="text"  name="pass_participant" value="<?php echo $erow['pass_participant']; ?>"  />
-                                                    </div>
-
+                                                      
                                                         <div class="form-group">
                                                     <label>Akses Student</label>
                                                     <select id="inputState" class="form-control" name="akses_participant">
@@ -69,6 +65,12 @@
 
                                                     </select>
                                                 </div>
+
+                                                 <div class="form-group">
+                                                        <label>Password</label>
+                                                        <input class="form-control" type="text"  name="pass_participant" value="<?php echo $erow['pass_participant']; ?>"  />
+                                                    </div>
+
 
 
 

@@ -10,9 +10,15 @@
 
 include('./../temp/staff/header.php'); 
 include('./../temp/staff/navbar.php'); 
+        include '../koneksi.php';
 
+$sql_pdk  = mysqli_query($conn, "SELECT count(*) as jum from  guidebook gd , participant part WHERE gd.id_participant  =  part.id_participant" );
+$r_pdk    = mysqli_fetch_array($sql_pdk);
+$total_pdk=$r_pdk['jum'];
 
-
+$sql_brt  = mysqli_query($conn, "SELECT count(*) as jum FROM gb_answer ");
+$r_brt    = mysqli_fetch_array($sql_brt);
+$total_brt=$r_brt['jum'];
 
 
 
@@ -62,15 +68,15 @@ include('./../temp/staff/navbar.php');
   <div class="row">
 
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-4 col-md-6 mb-3">
+    <div class="col-xl-6 col-md-8 mb-4">
       <div class="card border-left-primary shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
             <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Pendaftar</div>
+              <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Total Student</div>
               <div class="h5 mb-0 font-weight-bold text-gray-800">
 
-               Total Pendaftar: 
+              <?php echo $total_pdk ?> Students
 
               </div>
             </div>
@@ -82,25 +88,10 @@ include('./../temp/staff/navbar.php');
       </div>
     </div>
 
-    <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-4 col-md-6 mb-3">
-      <div class="card border-left-success shadow h-100 py-2">
-        <div class="card-body">
-          <div class="row no-gutters align-items-center">
-            <div class="col mr-2">
-              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Total Participant</div>
-              <div class="h5 mb-0 font-weight-bold text-gray-800"> Participant</div>
-            </div>
-            <div class="col-auto">
-              <i class="fas fa-fw fa-chart-area fa-2x text-gray-300"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <!-- Earnings (Monthly) Card Example -->
-    <div class="col-xl-4 col-md-6 mb-3">
+    <div class="col-xl-6 col-md-8 mb-4">
       <div class="card border-left-info shadow h-100 py-2">
         <div class="card-body">
           <div class="row no-gutters align-items-center">
@@ -108,7 +99,7 @@ include('./../temp/staff/navbar.php');
               <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Total Data Nilai</div>
               <div class="row no-gutters align-items-center">
                 <div class="col-auto">
-                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">Data Nilai</div>
+                  <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800"><?php echo $total_brt ?> Data Nilai</div>
                 </div>
                
               </div>

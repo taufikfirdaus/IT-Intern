@@ -36,7 +36,7 @@
   <thead>
 
     <tr>
-      <th scope="col" class="text-center">No,</th>
+      <th scope="col" class="text-center">No.</th>
       <th scope="col" class="text-center">Quiz</th>
       <th scope="col" class="text-center">Score</th>
       <th scope="col" class="text-center">Date</th>
@@ -76,7 +76,7 @@
                 </div> 
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-warning" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    <button type="button" class="btn btn-warning" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Close </button>
                   
                 </div>
                 </form>
