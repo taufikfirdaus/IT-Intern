@@ -34,13 +34,13 @@ include('./../temp/staff/navbar.php');
 
    
 
-   
+   <div class="block full" class="table table-striped">
 
 
 
                   
                      
-<table id="tabel-data">
+<table id="tabel-data" >
     <thead>
         <tr>
           
@@ -102,7 +102,7 @@ include('./../temp/staff/navbar.php');
 </table>
                       
   
-  
+  </div>
 
 
 

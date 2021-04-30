@@ -26,7 +26,7 @@ include('./../temp/staff/navbar.php');
     
   </div>
 
-  <div class="container mt-3">
+  <div class="container mt-3" style="margin-bottom:10px">
     <div class="row">
       <div class="col">
         <div class="card shadow">
