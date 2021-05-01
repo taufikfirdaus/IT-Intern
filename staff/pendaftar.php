@@ -34,7 +34,6 @@ include('./../temp/staff/navbar.php');
 
    
 
-   <div class="block full" class="table table-striped">
 
 
 
@@ -100,10 +99,6 @@ include('./../temp/staff/navbar.php');
 </script>
 
 </table>
-                      
-  
-  </div>
-
 
 
   

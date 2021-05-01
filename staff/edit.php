@@ -10,7 +10,7 @@
                 <div class="modal-body">
                 <?php
 
-                    $edit=mysqli_query($conn,"select * from participant where id_participant='".$row['id_participant']."'");
+                    $edit=mysqli_query($conn,"select * from guidebook gd , participant part where gd.id_participant  =  part.id_participant AND gd.id_participant='".$row['id_participant']."'");
                     $erow=mysqli_fetch_array($edit);
 
 
@@ -34,6 +34,9 @@
                                                         <label>Email</label>
                                                         <input class="form-control" type="text"  name="email_participant" value="<?php echo $erow['email_participant']; ?>"  />
                                                     </div>
+
+                                                    
+
                                                       
                                                         <div class="form-group">
                                                     <label>Akses Student</label>
@@ -51,6 +54,13 @@
 
                                                     </select>
                                                 </div>
+
+
+                                                   <div class="form-group">
+                                                        <label>Level</label>
+                                                        <input class="form-control" type="text"  name="kids" value="<?php echo $erow['kids']; ?>"  />
+                                                    </div>
+
 
 
 
